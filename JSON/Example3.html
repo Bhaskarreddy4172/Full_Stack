@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example 3</title>
+</head>
+<body>
+
+    <script>
+   const employees = [
+    {
+      "firstName": "Alice",
+      "lastName": "Johnson",
+      "password": "alice123",
+      "mobile": "9876543210",
+      "address": "123 Green Street",
+      "roles": ["Developer", "Tester"],
+      "experience": 3
+    },
+    {
+      "firstName": "Bob",
+      "lastName": "Smith",
+      "password": "bob456",
+      "mobile": "9123456780",
+      "address": "456 Blue Avenue",
+      "roles": ["Designer"],
+      "experience": 2
+    },
+    {
+      "firstName": "Charlie",
+      "lastName": "Brown",
+      "password": "charlie789",
+      "mobile": "9988776655",
+      "address": "789 Red Road",
+      "roles": ["Manager", "DevOps"],
+      "experience": 5
+    },
+    {
+      "firstName": "Diana",
+      "lastName": "Clark",
+      "password": "diana321",
+      "mobile": "9112233445",
+      "address": "321 Yellow Lane",
+      "roles": ["Developer"],
+      "experience": 4
+    },
+    {
+      "firstName": "Ethan",
+      "lastName": "Wright",
+      "password": "ethan654",
+      "mobile": "9334455667",
+      "address": "654 White Street",
+      "roles": ["Tester", "Designer"],
+      "experience": 1
+    }
+  ];
+    const jsonString = JSON.stringify(employees, null, 2);
+    console.log(jsonString);
+    document.write("<pre>" + jsonString + "</pre>");
+     </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const json = [{
+            "name": "Bhaskar",
+            "age": 25,
+            "qualification": "B.Tech",
+            "studiedAt": "Malla Reddy University",
+            "skills": ["JavaScript", "Python", "Java"]
+        }];
+        const object = JSON.parse(json);
+        document.write("<pre>"+JSON.stringify(object[0], null, 2)+"</pre>");
+    </script>
+</body>
+</html>

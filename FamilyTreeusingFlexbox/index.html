@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Family Tree with Image Tooltips</title>
+  <link rel="stylesheet" href="flexbox.css">
+</head>
+<body>
+  <h1 class="title">Family Tree</h1>
+
+  <div class="tree">
+
+    <div class="generation">
+      <div class="marriage">
+        <div class="tooltip" data-tooltip="Grandfather: Retired teacher, loves gardening.">
+          <div class="person male">Grandfather</div>
+        </div>
+        <div class="tooltip" data-tooltip="Grandmother: Excellent cook and storyteller.">
+          <div class="person female">Grandmother</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="generation">
+      <div class="marriage">
+        <div class="tooltip" data-tooltip="Father: Engineer and marathon runner.">
+          <div class="person male">Father</div>
+        </div>
+        <div class="tooltip" data-tooltip="Mother: Teacher and music lover.">
+          <div class="person female">Mother</div>
+        </div>
+      </div>
+      <div class="marriage">
+        <div class="tooltip" data-tooltip="Uncle: Businessman and traveler.">
+          <div class="person male">Uncle</div>
+        </div>
+        <div class="tooltip" data-tooltip="Aunt: Artist and painter.">
+          <div class="person female">Aunt</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="generation">
+      <div class="marriage">
+        <div class="tooltip image-tooltip">
+          <div class="person male">You</div>
+          <div class="tooltip-content">
+            <p><strong>You:</strong> Developer and tech enthusiast.</p>
+            <img src="tom.jpg" width="100" alt="Tom">
+          </div>
+        </div>
+        <div class="tooltip image-tooltip">
+          <div class="person female">Sister</div>
+          <div class="tooltip-content">
+            <p><strong>Spouse:</strong> Designer and nature lover.</p>
+            <img src="jerry.webp" width="100" alt="Jerry">
+          </div>
+        </div>
+      </div>
+      <div class="generation">
+        <div class="tooltip" data-tooltip="Child 1: Curious and creative.">
+          <div class="person male">Cousin 1</div>
+        </div>
+        <div class="tooltip" data-tooltip="Child 2: Energetic and cheerful.">
+          <div class="person female">Cousin 2</div>
+        </div>
+      </div>
+    </div>
+  </div>
+ <button class="show-map-button" onclick="document.querySelector('.map-container').style.display='block'">
+    Contact us
+  </button>
+  <div class="map-container">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15139.94488032107!2d78.2412586915931!3d18.43893478403061!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcc35005f99ea31%3A0x9a4192028be6d1ab!2sGram%20panchayat%20office!5e0!3m2!1sen!2sin!4v1750498792987!5m2!1sen!2sin"
+      width="600" height="450" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+
+</body>
+</html>

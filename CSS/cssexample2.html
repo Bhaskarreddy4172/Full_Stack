@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example 2</title>
+    <style>
+        *{
+            padding: 20px;
+            background-image: url('MRUH.webp');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        div{
+            width: 200px;
+            height: 125px;
+            padding:10px;
+            background-color:#dc7c7c;
+            border:1px solid black;
+             background-image: url('MRULOGO.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        #box{
+            transform: rotate(30deg);
+            -ms-transform: rotate(30deg);       /* IE 9 */
+            -moz-transform: rotate(30deg);     /* Firefox*/
+            -webkit-transform: rotate(30deg);  /* Safari and Chrome*/
+            -o-transform: rotate(30deg);       /* opera*/
+            background-image: url('london.jpg');
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <div onmouseenter="this.style.color='green'">Welcome To MALLAREDDY UNIVERSITY</div>
+
+    <div id="box" onmouseenter="changeFontSize(); changeColor();">Hello World!!</div>
+
+</body>
+</html>

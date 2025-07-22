@@ -1,0 +1,23 @@
+<html>
+<body>
+   <p> The intersection of set1 and set2 is: </p>
+   <p id = "output"> </p>
+   <script>
+
+      const set1 = new Set(["BMW", "Audi", "TATA"]);
+      const set2 = new Set(["BMW", "TATA", "Honda", "Suzuki"]);
+
+      const inter = new Set();
+      for (let car of set1) {
+         if (set2.has(car)) {
+            inter.add(car);
+         }
+      }
+
+      for (let value of inter.values()) {
+         document.getElementById("output").innerHTML += value + "<br> ";
+      }
+
+   </script>
+</body>
+</html>

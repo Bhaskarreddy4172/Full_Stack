@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <script>
+        function validateForm() {
+            var uname=window.document.login.uname.value;
+            var pwd=window.document.login.pwd.value;
+            var emailId=window.document.login.emailId.value;
+            
+            var st=" "; var i=0;
+            if(uname.length == 0|| uname == ""){
+                st += "User name\n"; i++;
+            }
+
+            if(pwd.length == 0|| pwd == ""){
+                st += "Password\n"; i++;
+            }
+
+            if(emailId.length == 0 || emailId == ""){
+                st += "Email Id Not Entered\n"; i++;
+            }
+
+            if(i == 0){
+                return true;
+            }else{
+                alert("Please Enter The Below Details:\n"+st);
+                return false;
+            }
+        }
+
+        function validateEmail(){
+            var emailId=window.document.login.emailId.value;
+            atpos = emailId.indexOf("@");
+            dotpos=emailId.lastIndexOf(".");
+
+            if(atpos < 1 || (dotpos - atpos < 2)){
+                alert("Please enter valid email") 
+                document.emailId.emailId.focus();
+                return false;
+            }
+            retrun (true);
+        }
+    </script>
+</head>
+<body>
+    <form action="./test.jsp"  name="login" method="POST" onsubmit="return validateForm()">
+    <table>
+           <tr> 
+              <td>User Name</td>
+              <td><input type="text" name="uname" autofocus/></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password" name="pwd"/></td>
+            </tr>
+
+            <tr>
+               <td>Email:</td>
+               <td><input type="email" name="emailId"/></td>
+            </tr>
+            <tr>
+                <td><input type="reset" value="Reset"></td>
+                <td><input type="submit" value="Submit"></td>
+            </tr> 
+    </table>
+    </form>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEAK SET EXAMPLE</title>
+</head>
+<body>
+    <font color="green" size="5">
+        Weak Set is a ES6 Feature 
+        -Java Script 2015<br>
+        Es6 Fully Supported in all modern browsers since June 2017<br>
+    </font>
+    <script>
+        var emp={empNo:111, 
+            empName:"Bhaskar", 
+            empPwd:"Admin@123"};
+        var emp1={empNo:112, 
+            empName:"Baskar", 
+            empPwd: "Admin@123"};
+        var emp2={empNo:113, 
+            empName:"Baskhar", 
+            empPwd: "Admin@123"};
+        var empWeakSet = new WeakSet([emp, emp1, emp2]);
+        document.write("Contains:"+empWeakSet.has(emp)+"<br>");
+
+        emp.WeakSet.forEach(function(value){
+            document.write(value.empNo + "<br>");
+            document.write(value.empName + "<br>");
+            document.write(value.empPwd + "<br><br>");
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var emp={empNo:111, 
+            empName:"Bhaskar", 
+            empPwd:"Admin@123"};
+        var emp1={empNo:112, 
+            empName:"Baskar", 
+            empPwd: "Admin@123"};
+        var emp2={empNo:113, 
+            empName:"Baskhar", 
+            empPwd: "Admin@123"};
+        var empSet = new Set();
+        empSet.add(emp);
+        empSet.add(emp1);
+        empSet.add(emp2);
+        for(var x of empSet) { 
+            document.write("Emp No: " + x.empNo + "<br>");
+            document.write("Emp Name: " + x.empName + "<br>");
+            document.write("Emp Password: " + x.empPwd + "<br><br>");
+        }
+
+        var iterator = empSet.keys();
+        for(var x of iterator){
+            const json = JSON.stringify(x);
+            document.write(json+"<br>");
+        }
+
+        empSet.forEach(function(value){
+            document.write(value.empNo + "<br>");
+            document.write(value.empName + "<br>");
+            document.write(value.empPwd + "<br><br>");
+        });
+
+        empSet.forEach(function(value){ 
+           const json = JSON.stringify(value);
+              document.write(json + "<br>");
+        });
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

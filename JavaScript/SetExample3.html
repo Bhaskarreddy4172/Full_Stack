@@ -1,0 +1,20 @@
+<html>
+<body>
+   <p>The difference of set1 and set2 is: </p>
+   <div id = "output"> </div>
+   <script>
+
+      const set1 = new Set(["BMW", "Audi", "TATA"]);
+      const set2 = new Set(["BMW", "TATA", "Honda", "Suzuki"]);
+
+      const diff = new Set(set1);
+      for (let car of set2) {
+         diff.delete(car);
+      }
+
+      for (let value of diff.values()) {
+         document.getElementById("output").innerHTML += value + "<br> ";
+      }
+   </script>
+</body>
+</html>

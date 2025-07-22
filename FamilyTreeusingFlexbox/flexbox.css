@@ -1,0 +1,169 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fff;
+  padding: 40px;
+  text-align: center;
+  background-image: url('home.jpeg');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.tree {
+  display: flexbox;
+  flex-direction: column;
+  align-items: center;
+}
+
+.generation {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.marriage {
+  display: flexbox;
+  position: relative;
+  margin: 20px;
+}
+
+.person {
+  border: 2px solid #222;
+  border-radius: 6px;
+  padding: 10px 20px;
+  margin: 0 10px;
+  min-width: 100px;
+  font-weight: bold;
+  position: relative;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.person:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.male {
+  background-color: #a8d0f0;
+}
+
+.female {
+  background-color: #f7a8a8;
+}
+
+.marriage::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: black;
+  z-index: 0;
+}
+
+.marriage::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 2px;
+  height: 20px;
+  background: black;
+  transform: translateX(-50%);
+}
+
+.generation .generation::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: black;
+}
+
+.generation .generation {
+  position: relative;
+  margin-top: 40px;
+}
+
+.tooltip[data-tooltip]:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 4px;
+  white-space: nowrap;
+  font-size: 14px;
+  opacity: 1;
+  visibility: visible;
+  z-index: 100;
+}
+
+.tooltip[data-tooltip]::after {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.image-tooltip {
+  position: relative;
+}
+
+.image-tooltip .tooltip-content {
+  display: none;
+  position: absolute;
+  bottom: 130%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  white-space: nowrap;
+  z-index: 999;
+  width: max-content;
+}
+
+.image-tooltip:hover .tooltip-content {
+  display: block;
+}
+.map-container {
+      display: none;
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    iframe {
+      max-width: 100%;
+      border: 0;
+    }
+
+    .show-map-button {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }

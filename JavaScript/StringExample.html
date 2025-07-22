@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Example</title>
+    <script>
+        var str = "Welcome to Erravati's Labs";
+        var str1="Hello";
+
+    document.writeln(str + "<br>");
+    document.writeln(str.length + "<br>");
+    document.writeln(str.toUpperCase() + "<br>");
+    document.writeln(str.toLowerCase() + "<br>");
+    document.writeln(str.indexOf("t") + "<br>");
+    document.writeln(str.search("t") + "<br>");
+    document.writeln(str.charAt(8) + "<br>");
+    document.writeln(str.split("") + "<br>");
+    document.writeln(str.split(" ") + "<br>");
+    document.writeln(str.slice(2,8) + "<br>");
+    document.writeln(str.replace("SS","AA") + "<br>");
+    document.writeln(str.concat(str1) + "<br>");
+    document.writeln(str.trim() + "<br>");
+    document.writeln(str.slice(0,1).toUpperCase() + str.slice(1).toLowerCase() + "<br>");
+
+    let fruits = ["Apple", "Banana",];
+    document.writeln(fruits + "<br>");
+    fruits.push("Orange");
+    document.writeln(fruits + "<br>");
+    let lastFruit = fruits.pop();
+    document.writeln(lastFruit + "<br>");
+    let firstFruit = fruits.shift();
+    document.writeln(firstFruit + "<br>");
+    fruits.unshift("orange");
+    document.writeln(fruits + "<br>");
+    let fruits1 = ["Apple", "Banana"];
+    let moreFruits1 = ["Orange", "pear"];
+    let allFruits = fruits1.concat(moreFruits1);
+    document.writeln(allFruits + "<br>");
+
+    let citrus = fruits.slice(2,4);
+    document.writeln(citrus + "<br>");
+
+    allFruits.forEach(function(fruit) {
+        console.log(fruit);
+        document.writeln(fruit + "<br>");
+    });
+</script>
+</head>
+<body>
+    
+</body>
+</html>

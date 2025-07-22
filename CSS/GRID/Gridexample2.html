@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <style>
+      .container {
+         display: grid;
+         grid: "header header header header" 100px
+               "sidebar content content content" 100px
+               "footer footer footer footer" 100px;
+         padding: 10px;
+         gap: 20px;
+         background-color: lightblue;
+      }
+
+      .item1 {
+         grid-area: header;
+      }
+
+      .item2 {
+         grid-area: sidebar;
+      }
+
+      .item3 {
+         grid-area: content;
+      }
+
+      .item4 {
+         grid-area: footer;
+      }
+
+      .container>div {
+         background-color: lightcoral;
+         text-align: center;
+         color: white;
+         padding: 20px;
+      }
+   </style>
+</head>
+
+<body>
+   <h2>
+      CSS Grid Property
+   </h2>
+   <p>
+      <strong>
+         grid: "header header header header 100px
+         sidebar content content content 100px
+         footer footer footer footer 100px"
+      </strong>; 
+      There are three rows and four columns. The header
+      is first row and takes four columns, sidebar and
+      content are second row and take single column 
+      and 3 columns respectively and footer is third
+      column and takes all four columns. All rows 
+      have 100px height.
+   </p>
+   <div class="container">
+      <div class="item1">
+         This is header
+      </div>
+      <div class="item2">
+         This is sidebar
+      </div>
+      <div class="item3">
+         This is content
+      </div>
+      <div class="item4">
+         This is footer
+      </div>
+   </div>
+
+</body>
+
+</html>

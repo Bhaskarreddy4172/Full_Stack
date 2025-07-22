@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Trainee Form (Prompt + Pass/Fail)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px; 
+    }
+    button {
+      margin: 5px;
+      padding: 6px 12px;
+      font-size: 14px;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 15px;
+    }
+    th, td {
+      border: 1px solid #aaa;
+      padding: 8px;
+      text-align: center;
+    }
+    th {
+      background-color: #eee;
+    }
+    .pass {
+      color: green;
+      font-weight: bold;
+    }
+    .fail {
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Add Trainee</h2>
+
+<button onclick="addTrainee()">Add Trainee</button>
+
+<table id="traineeTable">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Department</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+
+<script>
+  const traineeSet = new Set();
+
+  function addTrainee() {
+    const id = prompt("Enter Trainee ID:");
+    const name = prompt("Enter Trainee Name:");
+    const age = prompt("Enter Trainee Age:");
+    const department = prompt("Enter Department:");
+
+    if (id && name && age && department) {
+      const isPassed = confirm("Click OK if trainee passed, Cancel if failed.");
+      const status = isPassed ? "Pass" : "Fail";
+
+      const trainee = { id, name, age, department, status };
+
+      if (![...traineeSet].some(t => t.id === id)) {
+        traineeSet.add(trainee);
+        displayTrainees();
+      } else {
+        alert("Trainee with this ID already exists!");
+      }
+    }else {
+      alert("All fields are required!");
+    }
+  }  
+
+  function displayTrainees() {
+    const tbody = document.querySelector("#traineeTable tbody");
+    tbody.innerHTML = ""; 
+
+    traineeSet.forEach(t => {
+      const row = document.createElement("tr");
+
+      row.innerHTML = `
+        <td>${t.id}</td>
+        <td>${t.name}</td>
+        <td>${t.age}</td>
+        <td>${t.department}</td>
+        <td class="${t.status.toLowerCase()}">${t.status}</td>
+      `;
+
+      tbody.appendChild(row);
+    });
+  }
+</script>
+</body>
+</html>

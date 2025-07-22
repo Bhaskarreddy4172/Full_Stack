@@ -1,0 +1,40 @@
+ * {
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      color: darkblue;
+    }
+
+    .highlight {
+      background-color: yellow;
+    }
+
+    #special {
+      color: red;
+      font-weight: bold;
+    }
+
+
+    input[type="text"] {
+      border: 2px solid green;
+    }
+
+    h2, p {
+      margin: 10px 0;
+    }
+
+
+    p::first-letter {
+      font-size: 150%;
+      color: purple;
+    }
+
+    a:hover {
+      color: hotpink;
+      text-decoration: underline;
+    }
+
+    div p {
+      color: green;
+    }

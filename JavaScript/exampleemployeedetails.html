@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Form</title>
+    <script style="text-align: center; margin: 10px; font-size: 20px; padding: 10px;">
+        function myFunction() {
+            var empNumber = document.myEmpform.empNumber.value;
+            var empName = document.myEmpform.empName.value;
+            var empAddress = document.myEmpform.empAddress.value;
+            var empEmail = document.myEmpform.empEmail.value;
+            var empPhone = document.myEmpform.empPhone.value;
+            var empSalary = document.myEmpform.empSalary.value;
+            var empDepartment = document.myEmpform.empDepartment.value;
+            if (empNumber === "" || empName === "" || empAddress === "" || empEmail === "" || empPhone === "" || empSalary === "" || empDepartment === "") {
+                alert("Please fill all the fields.");
+                return false;
+            }
+            var confirmSubmit = confirm("Are you sure you want to submit the form?");
+            if (!confirmSubmit) {
+                return false;
+            }
+            document.getElementById("Id1").innerHTML = 
+            "<font color=red>Employee Number:</font> " + empNumber +
+            "<br><font color=red>Employee Name:</font>: " + empName + 
+            "<br><font color=red>Employee Address:</font>: "  + empAddress + 
+            "<br><font color=red>Employee Email:</font>: "   + empEmail +
+            "<br><font color=red>Employee Phone:</font>: "   + empPhone + 
+            "<br><font color=red>Employee Salary:</font>: "   + empSalary + 
+            "<br><font color=red>Employee Department:</font>: "   + empDepartment;
+            return false;
+        }
+    </script>
+</head>
+<body background-color="lightblue">
+    <form action="POST" name="myEmpform" onsubmit="return myFunction()">
+        <h1 style="text-align: center; color: rgb(0, 0, 1);">Employee Details Form</h1>
+        <table border="1" cellpadding="10" cellspacing="0" style="width: 50%; margin: auto; background-color: white;">
+            <tr>
+                <td>Employee Number</td>
+                <td><input type="number" name="empNumber" required placeholder="Employee Number" autofocus/></td>
+            </tr>
+            <tr>
+                <td>Employee Name</td>
+                <td><input type="text" name="empName" required placeholder="Employee Name"/></td>
+            </tr>
+            <tr>
+                <td>Employee Address</td>
+                <td><input type="text" name="empAddress" required placeholder="Employee Address"/></td>
+            </tr>
+            <tr>
+                <td>Employee Email</td>
+                <td><input type="email" name="empEmail" required placeholder="Employee Email"/></td>
+            </tr>
+            <tr>
+                <td>Employee Phone</td>
+                <td><input type="tel" name="empPhone" required placeholder="Employee Phone"/></td>
+            </tr>
+            <tr>
+                <td>Employee Salary</td>
+                <td><input type="number" name="empSalary" required placeholder="Employee Salary"/></td>
+            </tr>
+            <tr>
+                <td>Employee Department</td>
+                <td>
+                    <select name="empDepartment" required>
+                        <option value="" disabled selected>Select Department</option>
+                        <option value="HR">HR</option>
+                        <option value="IT">IT</option>
+                        <option value="Finance">Finance</option>
+                        <option value="Marketing">Marketing</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Submit"/></td>
+                <td><input type="reset" value="Reset"/></td>
+            </tr>
+        </table>
+    </form>
+    <div id="Id1" style="font-size:20px; text-align: justify; padding:10px"></div>
+</body>
+</html>

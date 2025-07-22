@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <font color="green" size="5">
+        Set is a ES6 Feature 
+        -Jaca Script 2015<br>
+        Es6 Fully Supported in all modern browsers since June 2017<br>
+    </font>
+    <script>
+        //EXAMPLE 1
+        let mySet = new Set();
+        mySet.add("CAT");
+        mySet.add("DOG");
+        mySet.add("DOG");
+        mySet.add("TOM");
+        document.write("Size: " + mySet.size + "<br>");
+        for(const name of mySet) {
+            document.write(name+"<br>");
+        }
+        //EXAMPLE 2
+        let myName = new Set(['JACK', 'JILL', 'JACK']);
+         for(const name of myName) {
+            document.write(name+"<br>");
+        }
+        document.write("typeof: " + typeof myName + "<br>"); 
+        let result=myName instanceof Set;
+        document.write("instanceof: " + result + "<br>");
+        document.write("Size: " + myName.size + "<br>");
+        let allNames = myNames.union(mySet);
+        allNames.foreach(function(name){
+            document.write(name+"<br>");
+        });
+        allNames.clear();
+        document.write("After Clear Method");
+        allNames.forEach(function(name){
+            document.write(name+"<br>");
+        });
+    </script>
+</body>
+</html>

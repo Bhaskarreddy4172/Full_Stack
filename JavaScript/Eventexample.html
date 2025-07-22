@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="5;">
+    <title>JavaScript Event Example</title>
+    <script type="text/javascript">
+        function focusLost() {
+            alert("Focus Lost");
+        }
+        function textChanged() {
+            alert("Don't change the Data");
+        }
+        
+    </script>
+</head>
+<body>
+    <center>
+        <input type="text" name="t1" onfocus="focusLost()" onblur="textChanged()" placeholder="Enter Text Here" />
+        <input type="text" name="t2" onfocus="focusLost()" onblur="textChanged()" placeholder="Enter Text Here" /> <br><br>
+        <input type="button" value="Submit" onclick="alert('Form Submitted')" />
+
+    </center>
+    
+</body>
+</html>

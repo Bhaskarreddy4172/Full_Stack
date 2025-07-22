@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Property CSS</title>
+    <style>
+        body {
+            margin: 20px;
+            font-family: Arial, sans-serif;
+            overflow: scroll;
+        }
+
+        .box {
+            display: inline-block;
+            background-color: #bbedbb;
+            border: 1px solid #000;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        .static {
+            position: static;
+        }
+
+        .relative {
+            position: relative;
+            top: 10px;
+            left: 20px;
+            background-color: #ffd6a5;
+        }
+
+        .absolute-container {
+            position: relative;
+            border: 2px dashed #aaa;
+            height: 200px;
+            margin-top: 30px;
+        }
+
+        .absolute {
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            background-color: #a0c4ff;
+        }
+
+        .fixed {
+            position: fixed;
+            top: 0;
+            right: 0;
+            background-color: #ffadad;
+            padding: 10px;
+            z-index: 999;
+        }
+
+        .sticky {
+            position: sticky;
+            top: 0;
+            background-color: #caffbf;
+            padding: 10px;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CSS Position Property Examples</h1>
+
+    <div class="box static">
+        <h2>Position: static</h2>
+        <p>This is the default position. Elements flow normally.</p>
+    </div>
+
+    <div class="box relative">
+        <h2>Position: relative</h2>
+        <p>This box is offset from its normal position (top:10px, left:20px).</p>
+    </div>
+
+    <div class="absolute-container">
+        <div class="box absolute">
+            <h2>Position: absolute</h2>
+            <p>This box is positioned absolutely inside the relative container.</p>
+        </div>
+    </div>
+
+    <div class="box sticky">
+        <h2>Position: sticky</h2>
+        <p>This box sticks to the top when scrolling.</p>
+    </div>
+
+    <p style="margin-top: 1000px;">Scroll down to test fixed and sticky positions.</p>
+
+    <div class="box fixed">
+        <h2>Position: fixed</h2>
+        <p>This box stays at the top-right corner while scrolling.</p>
+    </div>
+
+</body>
+</html>

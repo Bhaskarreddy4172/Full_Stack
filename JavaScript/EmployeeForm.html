@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Employee Registration</title>
+<link rel="stylesheet" href="employee.css">
+<script src="employee.js"></script>
+</head>
+<body>
+<center>
+<div id="employee">
+  <form id="employeeForm">
+    <label>First Name: <input type="text" id="fname" required></label><br><br>
+    <label>Last Name: <input type="text" id="lname" required></label><br><br>
+    <label>Password: <input type="password" id="pwd" required></label><br><br>
+    <label>Mobile Number: <input type="text" id="mobileNum" required></label><br><br>
+    <label>Address: <input type="text" id="addr" required></label><br><br>
+    <label>Experience (years): <input type="number" id="exp" required min="0"></label><br><br>
+    <hr>
+    <label for="roles">Select Role(s):</label><br>
+    <select id="roles" name="roles" multiple size="5" required>
+      <option value="Developer">Developer</option>
+      <option value="Designer">Designer</option>
+      <option value="Tester">Tester</option>
+      <option value="Manager">Manager</option>
+      <option value="DevOps">DevOps</option>
+    </select><br><br>
+    <button type="submit">Submit</button>
+  </form>
+  <hr>
+  <div id="empOutput"></div>
+</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Birthday Info</title>
+</head>
+<body>
+  <h2>Enter a Date</h2>
+  <input type="date" id="birthday">
+  <br><br>
+  <button onclick="getDay()">Find Day</button>
+  <button onclick="getMonth()">Find Month</button>
+  <button onclick="getDaysTillNow()">Days Till Now</button>
+  <p id="result"></p>
+
+  <script>
+    function getDay() {
+      const input = document.getElementById("birthday").value;
+      if (!input) {
+        document.getElementById("result").innerText = "Please enter a date.";
+        return;
+      }
+
+      var date = new Date(input);
+      var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+      var dayName = days[date.getDay()];
+      document.getElementById("result").innerText = "You were born on a " + dayName + ".";
+    }
+
+    function getMonth() {
+      var input = document.getElementById("birthday").value;
+      if (!input) {
+        document.getElementById("result").innerText = "Please enter a date.";
+        return;
+      }
+
+      var date = new Date(input);
+      var months = [
+        "January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"
+      ];
+      var monthName = months[date.getMonth()];
+      document.getElementById("result").innerText = "You were born in " + monthName + ".";
+    }
+
+    function getDaysTillNow() {
+      var input = document.getElementById("birthday").value;
+      if (!input) {
+        document.getElementById("result").innerText = "Please enter a date.";
+        return;
+      }
+
+      var birthDate = new Date(input);
+      var today = new Date();
+      var timeDiff = today - birthDate;
+
+      if (timeDiff < 0) {
+        document.getElementById("result").innerText = "That date is in the future.";
+        return;
+      }
+
+      var daysPassed = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+      document.getElementById("result").innerText = "It has been " + daysPassed + " days since your birthday.";
+    }
+  </script>
+</body>
+</html>

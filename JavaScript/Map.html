@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Trainee CRUD with Map</title>
+  <link rel="stylesheet" href="map.css">
+  <script src="map.js"></script>
+</head>
+<body>
+
+<h2>Trainee CRUD App (Map)</h2>
+
+<input type="text" id="searchId" placeholder="Enter Trainee ID">
+<button onclick="searchTrainee()">Search</button>
+
+<div id="searchResult"></div>
+
+<button onclick="addTrainee()">Add Trainee</button>
+<button onclick="updateTrainee()">Update Trainee</button>
+<button onclick="deleteTrainee()">Delete Trainee</button>
+
+<table id="traineeTable">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Department</th>
+     
+    </tr>
+  </thead>
+  <tbody>
+    
+  </tbody>
+</table>
+</body>
+</html>

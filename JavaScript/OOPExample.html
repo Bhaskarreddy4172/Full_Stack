@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JavaScript OOP - Trainee Example</title>
+  <style>
+    body{
+        background-color: rgb(65, 105, 78);
+    }
+    #traine {
+      background-color: rgb(255, 255, 255);
+       padding: 25px;
+       width: 300px;
+       text-align: justify;
+       border-radius: 8px;
+    }
+  </style>
+  <script>
+    class Trainee {
+      constructor(firstName, lastName, password, courses, courseCost) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.password = password;
+        this.courses = courses;
+        this.courseCost = courseCost;
+      }
+
+      getName() {
+        return this.firstName + ' ' + this.lastName;
+      }
+
+      updatePassword(newPassword) {
+        this.password = newPassword;
+      }
+
+      getCourseCost() {
+        return this.courseCost;
+      }
+
+      getTraineeDetails() {
+        return `
+          <strong>Name:</strong> ${this.getName()}<br>
+          <strong>Selected Course(s):</strong> ${this.courses.join(', ')}<br>
+          <strong>Total Course Cost:</strong> Rs.${this.courseCost}<br>
+          <strong>Password:</strong> ${this.password}
+        `;
+      }
+    }
+
+    const Courses = {
+      "Java": 5000,
+      "Python": 4500,
+      "Web Development": 6000,
+      "Data Science": 7000
+    };
+
+    let traineeObj = null;
+
+    function handleFormSubmit(e) {
+      e.preventDefault();
+
+      const firstName = document.getElementById('fname').value;
+      const lastName = document.getElementById('lname').value;
+      const password = document.getElementById('password').value;
+      const checkedCourses = Array.from(document.querySelectorAll('input[name="course"]:checked')).map(cb => cb.value);
+      const totalCost = checkedCourses.reduce((sum, c) => sum + Courses[c], 0);
+
+      traineeObj = new Trainee(firstName, lastName, password, checkedCourses, totalCost);
+      document.getElementById('output').innerHTML = traineeObj.getTraineeDetails() + 
+        `<br><button onclick='updatePwdPrompt()'>Update Password</button>`;
+    }
+
+    function updatePwdPrompt() {
+      const newPwd = prompt("Enter new password:");
+      if (newPwd && traineeObj) {
+        traineeObj.updatePassword(newPwd);
+        document.getElementById('output').innerHTML = traineeObj.getTraineeDetails() + 
+          `<br><button onclick='updatePwdPrompt()'>Update Password</button>`;
+      }
+    }
+
+    window.onload = function () {
+      document.getElementById('traineeForm').addEventListener('submit', handleFormSubmit);
+    };
+  </script>
+</head>
+<body>
+ <center>
+<div id="traine">
+  <form id="traineeForm">
+    <label>First Name: <input type="text" id="fname" required /></label><br><br>
+    <label>Last Name: <input type="text" id="lname" required /></label><br><br>
+    <label>Password: <input type="password" id="password" required /></label><br><br>
+    <hr>
+      <legend>Select Courses:</legend>
+      <label><input type="checkbox" name="course" value="Java" /> Java (Rs.5000)</label><br>
+      <label><input type="checkbox" name="course" value="Python" /> Python (Rs.4500)</label><br>
+      <label><input type="checkbox" name="course" value="Web Development" /> Web Development (Rs.6000)</label><br>
+      <label><input type="checkbox" name="course" value="Data Science" /> Data Science (Rs.7000)</label><br>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <hr>
+  <div id="output"></div>
+</div>
+  </center>
+</body>
+</html>
