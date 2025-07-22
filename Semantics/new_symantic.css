@@ -1,0 +1,76 @@
+body {
+    background-image: url("Images/car.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size:50%;
+    background-position:50%;
+}
+
+#header {
+    background-color: rgba(0, 0, 255, 0.588);
+    color: rgb(247, 138, 5);
+    clear: both;
+    text-align: center;
+    padding: 5px;
+}
+
+#footer {
+    background-color: black;
+    color: white;
+    clear: both;
+    text-align:center;
+    padding: 5px;
+    background-position: bottom;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+
+#nav {
+    background-color: #eeeeee;
+    line-height: 30px;
+    height: 300px;
+    width: 100px;
+    float: left;
+    padding: 5px;
+}
+
+#section {
+    width: 300px;
+    float: left;
+    padding: 10px;
+}
+
+#aside {
+    width: 300px;
+    float: right;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-left: 1px solid #ccc;
+}
+
+input, select {
+    width: 100%;
+    padding: 5px;
+    margin: 5px 0 15px 0;
+}
+
+label {
+    font-weight: bold;
+}
+
+button {
+    padding: 6px 12px;
+    margin-right: 10px;
+}
+#corner-video {
+  position:absolute;
+  bottom: 10px;
+  left: 40px;
+  z-index: 999;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+

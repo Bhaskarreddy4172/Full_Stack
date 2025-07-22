@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Profile Card Generator</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Dynamic Profile Card Generator</h1>
+    <form id="profileForm">
+      <input type="text" id="name" placeholder="Enter your name" autofocus required />
+      <textarea id="bio" placeholder="Write a short bio" required></textarea>
+      <input type="file" id="imageUpload" accept="image/*" required />
+      <select id="borderStyle">
+        <option value="square">Square</option>
+        <option value="rounded">Rounded</option>
+        <option value="circle">Circle</option>
+      </select>
+      <button type="button" id="previewBtn">Preview</button>
+      <button type="submit">Generate Card</button>
+    </form>
+
+    <div id="previewContainer"></div>
+    <h2>Your Cards</h2>
+    <div id="cardsContainer"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

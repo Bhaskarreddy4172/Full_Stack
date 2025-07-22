@@ -1,0 +1,73 @@
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      margin: 20px;
+      background:#e74c3c;
+      color: #fff;
+    }
+    h1, h2 {
+      text-align: center;
+    }
+    form {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 15px;
+      border-radius: 10px;
+      max-width: 500px;
+      margin: auto;
+    }
+    input, textarea, select, button {
+      width: 100%;
+      margin: 6px 0;
+      padding: 8px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1em;
+    }
+    button {
+      background-color: #ff7e5f;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #ff2f00;
+    }
+    .event-card {
+      background: rgba(255, 255, 255, 0.2);
+      padding: 15px;
+      margin: 10px auto;
+      border-radius: 10px;
+      max-width: 500px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+    .event-title {
+      font-weight: bold;
+      font-size: 1.3em;
+    }
+    .category-badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 5px;
+      font-size: 0.8em;
+      margin-top: 5px;
+      color: #fff;
+    }
+    .category-Birthday { background-color: #f39c12; }
+    .category-Meeting { background-color: #27ae60; }
+    .category-Holiday { background-color: #2980b9; }
+    .category-Custom { background-color: #8e44ad; }
+    .countdown {
+      font-size: 1.1em;
+      margin-top: 8px;
+    }
+    .email-info {
+      font-size: 0.9em;
+      margin-top: 5px;
+      color: #e8e8e8;
+    }
+    .delete-btn {
+      background-color: #e74c3c;
+      margin-top: 8px;
+    }
+    .delete-btn:hover {
+      background-color: #f71900;
+    }

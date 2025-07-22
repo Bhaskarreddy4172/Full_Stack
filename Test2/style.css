@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f0f2f5;
+  color: #333;
+  padding: 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+}
+
+h1, h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+form input[type="text"],
+form textarea,
+form select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+form button {
+  padding: 10px;
+  border: none;
+  background-color: #12375f;
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #007bff;
+}
+
+#previewContainer, #cardsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.profile-card {
+  width: 220px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  padding: 15px;
+  text-align: center;
+  animation: fadeInScale 0.5s ease;
+  position: relative;
+}
+
+.profile-card.dark {
+  background-color: #333;
+  color: #f0f0f0;
+}
+
+.profile-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.square { border-radius: 0; }
+.rounded { border-radius: 15px; }
+.circle { border-radius: 50%; }
+
+.card-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.card-buttons button {
+  padding: 5px 8px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background-color 0.3s;
+}
+
+.card-buttons button.delete {
+  background-color: #cd3d4b;
+  color: white;
+}
+
+.card-buttons button.delete:hover {
+  background-color: #ff0019;
+}
+
+.card-buttons button.edit {
+  background-color: #ffc107;
+  color: black;
+}
+
+.card-buttons button.edit:hover {
+  background-color: #d39e00;
+}
+
+.card-buttons button.theme-toggle {
+  background-color: #28a745;
+  color: white;
+}
+
+.card-buttons button.theme-toggle:hover {
+  background-color: #1c7c31;
+}
+@keyframes fadeInScale {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@media (max-width: 600px) {
+  .profile-card {
+    width: 100%;
+  }
+}

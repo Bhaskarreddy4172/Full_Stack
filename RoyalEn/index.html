@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Bhaskar Reddy">
+    <meta name="description" content="Bikes Company">
+    <meta name="keywords" content="Hunter 350, Continental GT650, Interceptor 650,Classic 350">
+    <meta http-equiv="refresh" content="30">
+    <title>Royal Rider</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <h1 class="logo">Royal Rider</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#bikes">Bikes</a></li>
+                    <li><a href="#rides">Rides</a></li>
+                    <li><a href="#test-ride">Test Ride</a></li>
+                    <li><a href="#accessories">Accessories</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <h2>Ride Pure. Ride Royal.</h2>
+        <p>Explore the legacy of motorcycling with our iconic machines.</p>
+        <a href="#bikes" class="btn">Explore Bikes</a>
+    </section>
+
+    <section id="bikes" class="bikes">
+        <h2>Our Motorcycles</h2>
+        <div class="bike-list">
+            <div class="bike-card">
+                <img src="Hunter350.png" alt="Hunter 350">
+                <h3>Hunter 350</h3>
+                <p>Agile and stylish urban cruiser.</p>
+            </div>
+            <div class="bike-card">
+                <img src="Himalayan.avif" alt="Himalayan 450">
+                <h3>Himalayan 450</h3>
+                <p>Adventure ready. Built for the Himalayas.</p>
+            </div>
+            <div class="bike-card">
+                <img src="SuperMeteor.avif" alt="Super Meteor 650">
+                <h3>Super Meteor 650</h3>
+                <p>The ultimate cruiser experience.</p>
+            </div>
+            <div class="bike-card">
+                <img src="GT650.webp">
+                <h3>Continental GT650</h3>
+                <p>cafe racer style motorcycle known for its classic design and 
+                    powerful 648cc parallel-twin engine</p>
+            </div>
+            <div class="bike-card">
+                <img src="interceptor650.webp">
+                <h3>Interceptor 650</h3>
+                <p>retro styling and smooth parallel-twin engine</p>
+            </div>
+            <div class="bike-card">
+                <img src="classic.avif">
+                <h3>Classic 350</h3>
+                <p>classic, timeless design and strong association with the Royal Enfield brand's heritage</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="rides" class="rides">
+        <h2>Rides & Events</h2>
+        <p>Join our guided expeditions and training schools. Adventure awaits!</p>
+    </section>
+
+    <section id="test-ride" class="test-ride">
+    <h2>Book a Test Ride</h2>
+    <p>Experience the thrill. Schedule a test ride at your nearest dealership.</p>
+    <form action="#" method="post" class="test-ride-form">
+        <label for="full-name">Full Name:</label>
+        <input type="text" id="full-name" name="full-name" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="email-ride">Email:</label>
+        <input type="email" id="email-ride" name="email-ride" required>
+
+        <label for="model">Select Model:</label>
+        <select id="model" name="model" required>
+            <option value="">--Choose a Bike--</option>
+            <option value="Hunter 350">Hunter 350</option>
+            <option value="Himalayan 450">Himalayan 450</option>
+            <option value="Super Meteor 650">Super Meteor 650</option>
+            <option value="Continental GT650">Continental GT650</option>
+            <option value="Interceptor 650">Interceptor 650</option>
+            <option value="Classic 350">Classic 350</option>
+        </select>
+
+        <label for="location">Preferred Location:</label>
+        <input type="text" id="location" name="location" required>
+
+        <label for="date">Preferred Date:</label>
+        <input type="date" id="date" name="date" required>
+
+        <button type="submit">Book Now</button>
+    </form>
+</section>
+
+
+    <section id="accessories" class="accessories">
+        <h2>Gear & Accessories</h2>
+        <p>Customise your ride and style with official merchandise and gear.</p>
+    </section>
+
+    <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>Have questions or need support? Reach out to us.</p>
+    <form action="#" method="post" class="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+    <footer>
+        <p>© 2025 Royal Rider. All rights reserved.</p>
+    </footer>
+</body>
+</html>
